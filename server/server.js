@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-
+require ('./app/models/db');
 const app = express();
 
 // parse requests of content-type: application/json
@@ -15,6 +15,10 @@ app.get("/", (req, res) => {
 });
 
 // set port, listen for requests
-app.listen(3000, () => {
+var port = 3000;
+
+app.listen(port, () => {
   console.log("Server is running on port 3000.");
 });
+
+
